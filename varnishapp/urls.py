@@ -1,8 +1,6 @@
 from django.conf.urls.defaults import *
-from django.conf import settings
-from manager import VarnishManager
-
+from views import ManagementView
 
 urlpatterns = patterns('varnishapp.views',
-    (r'', 'management'),
+    (r'', ManagementView.as_view()),
 )
